@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: Roboto-bold;
+    src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf"), sans-serif;
+}
+body {
+    background-color: white;
+}
+main {
+    max-height: max-content;
+    /*display: none;*/
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 5rem;
+    padding: 0 10rem;
+}
+
+#img-illustration {
+    grid-row: 1 / 4;
+    height: 100dvh;
+    padding: 2rem;
+    display: block;
+    /*width: fit-content;*/
+}
+
+#signup {
+    grid-row: 2 / 3;
+    /*padding: 5rem 5rem;*/
+    font-size: 1.1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#signup h1, #on-success h1 {
+    font-size: 3.8rem;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#join p, #on-success p {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+#join ul {
+    /*background-color: aqua;*/
+    list-style-type: none;
+}
+#join ul li {
+    padding-bottom: 0.5rem;
+}
+.icon-list {
+    display: inline;
+    padding-right: 1rem;
+    vertical-align: -0.2rem;
+}
+form ul {
+    /*background-color: blanchedalmond;*/
+    list-style-type: none;
+}
+.email-label {
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+form ul li {
+    padding-bottom: 1rem;
+}
+#email, #submit, #dismiss-button {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+#submit, #dismiss-button {
+    /*background-color: #FF634D;*/
+    background-color: black;
+    border: 1px solid;
+    color: white;
+}
+#email:hover {
+    cursor: pointer;
+}
+#email-list:hover ~ li #submit {
+    background: linear-gradient(45deg, #FC5475, #FF634D);
+    cursor: pointer;
+}
+#submit:hover, #dismiss-button:hover {
+    background: linear-gradient(45deg, #FC5475, #FF634D);
+    cursor: pointer;
+}
+
+#on-success {
+    display: none;
+    width: 25rem;
+    margin: 5rem auto;
+}
+#on-sucess p {
+    padding: 0 5rem;
+}
+.icon-on-success {
+    width: 5rem;
+    padding-bottom: 2rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-device-width: 800px) {
+    body {
+        /*background-color: beige;*/
+    }
+    main {
+        width: 30rem;
+        grid-template-columns: auto;
+        grid-template-rows: unset;
+        padding: 2rem 5rem;
+    }
+    #img-illustration {
+        display: none;
+    }
+/*  
+    #img-illustration {
+        display: none;
+        height: 50dvh;
+        width: 100%;
+        margin: 0 auto;
+    }
+*/
+    #img-illustration::after {
+        content: "image remplace par ce texte";
+    }
+    #signup::before {
+        /*content: url("/assets/images/illustration-sign-up-mobile.svg");*/
+        background: url(assets/images/illustration-sign-up-mobile.svg) no-repeat;
+        content: "";
+        display: block;
+        width: 25rem;
+        height: 18rem;
+        margin: 0 auto;
+        padding: 0;
+        background-color: antiquewhite;
+    }
+    #signup h1 {
+        font-size: 2.5rem;
+        padding-top: 2rem;
+    }
+    /*#signup::after {
+        content: "texte apres signup";
+    }*/
+    #signup {
+        grid-column-start: 1;
+    }
+
+    #on-success {
+        position: relative;
+        top: 0;
+        display: none;
+        width: 20rem;
+        height: 90dvh;
+        margin: 0rem auto;
+    }
+    
+    .icon-on-success {
+        width: 5rem;
+        padding-bottom: 1rem;
+    }
+    #on-success h1 {
+        font-size: 2.5rem;
+    }
+    #on-sucess p {
+        font-size: 0.5rem;
+        padding: 0 5rem;
+    }
+    #dismiss-button {
+        position: absolute;
+        bottom: 0;
+    }
+}

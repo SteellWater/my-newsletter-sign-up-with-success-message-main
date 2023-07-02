@@ -52,8 +52,17 @@ main {
 }
 .icon-list {
     display: inline;
+    width: 3rem;
     padding-right: 1rem;
-    vertical-align: -0.2rem;
+    vertical-align: text-bottom;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.list-text {
+    display: inline-block;
+    width: 85%;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 form ul {
     /*background-color: blanchedalmond;*/
@@ -116,70 +125,76 @@ form ul li {
         /*background-color: beige;*/
     }
     main {
-        width: 30rem;
-        grid-template-columns: auto;
-        grid-template-rows: unset;
-        padding: 2rem 5rem;
-    }
-    #img-illustration {
-        display: none;
-    }
-/*  
-    #img-illustration {
-        display: none;
-        height: 50dvh;
-        width: 100%;
-        margin: 0 auto;
-    }
-*/
-    #img-illustration::after {
-        content: "image remplace par ce texte";
-    }
-    #signup::before {
-        /*content: url("/assets/images/illustration-sign-up-mobile.svg");*/
-        /*background: url(assets/images/illustration-sign-up-mobile.svg) no-repeat;*/
-        content: url(assets/images/illustration-sign-up-mobile.svg);
         display: block;
         width: 100%;
-        height: 18rem;
-        margin: 0 auto;
-        padding: 0;
-    /*  background-color: antiquewhite; */
+        /*height: 100dvh;*/
+        /*grid-template-columns: 100%;*/
+        /*background-color: beige;*/
     }
-    #signup::after , #signup::before {
-        display:inline-block;
+    #img-illustration {
+        display: none;
+    }
+    #signup {
+        width: 25rem;
+        margin: 0 auto;
+        margin-left: -3rem;
+        /*background-color: aqua;*/
+    }
+    #signup::before {
+        /*content: url(assets/images/illustration-sign-up-mobile.svg);*/
+        content: "";
+        background-image: url('assets/images/illustration-sign-up-mobile.svg');
+        display: block;
+        background-size: 100% 100%;
+        width: 100%;
+        height: 20rem;
+        /*background-color: black;*/
     }
     #signup h1 {
         font-size: 2.5rem;
         padding-top: 2rem;
     }
-    #signup {
-        grid-column-start: 1;
+    #signup h1, #signup #join, #signup form {
+        padding: 0 1rem;
+    }
+    #join ul li {
+        padding-bottom: 1rem;
+    }
+    .icon-list {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .list-text {
+        /*background-color: #FF634D;*/
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     #on-success {
         position: relative;
         top: 0;
-        display: none;
-        width: 20rem;
-        height: 80dvh;
-        margin: 0rem auto;
-    }
-    
+        width: 50%;
+        height: 90dvh;
+        margin: 0 auto;
+        padding: 0 1rem;
+        /*background-color: brown;*/
+    }    
     .icon-on-success {
         width: 5rem;
-        padding-bottom: 1rem;
+        padding-top: 5rem;
+        padding-bottom: 2rem;
     }
     #on-success h1 {
         font-size: 2.5rem;
     }
     #on-sucess p {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         padding: 0 5rem;
     }
     #dismiss-button {
         position: absolute;
         bottom: 0;
-        
+        width: 90%;
+        margin: 1rem auto;
     }
 }

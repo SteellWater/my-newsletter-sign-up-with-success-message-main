@@ -137,7 +137,7 @@ form ul li {
     #signup {
         width: 25rem;
         margin: 0 auto;
-        margin-left: -3rem;
+        /*margin-left: -3rem;*/
         /*background-color: aqua;*/
     }
     #signup::before {

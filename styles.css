@@ -144,7 +144,7 @@ form ul li {
     main {
         display: block;
         width: 100%;
-        padding: 0 5rem;
+        padding: 0 2rem;
         /*height: 100dvh;*/
         /*grid-template-columns: 100%;*/
         /*background-color: beige;*/
@@ -161,9 +161,11 @@ form ul li {
         content: "";
         background-image: url('assets/images/illustration-sign-up-mobile.svg');
         display: block;
-        background-size: 100% 100%;
-        width: 100%;
-        height: 40dvh;
+        background-size: cover;
+        border-radius: 0 0 10px 10px;
+        background-repeat: no-repeat;
+        padding: 10rem;
+        margin-bottom: 2rem;
         /*background-color: blue;*/
     }
     /*#signup::before, #signup::after {
